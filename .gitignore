@@ -1,7 +1,9 @@
 # Ignorar o ambiente virtual e seus arquivos
 .venv/
 
-# Ignorar novas imagens
-*.png
+# # Ignorar novas imagens
+# *.png
+
+.gitignore
 
 __pycache__/
