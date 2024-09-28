@@ -3,3 +3,5 @@
 
 # Ignorar novas imagens
 *.png
+
+__pycache__/
