@@ -4,4 +4,6 @@
 # Ignorar novas imagens
 *.png
 
+.gitignore
+
 __pycache__/
