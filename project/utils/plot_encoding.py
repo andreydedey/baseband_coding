@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, manchester=False):
+def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, yticks=[0, 0.5, 1], manchester=False):
     if manchester:
         # Criar o eixo do tempo e duplicar o sinal corretamente
         time = []
@@ -35,7 +35,7 @@ def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, manchester=F
     plt.title(title)
     plt.ylim(-negative_ylim, 1.25)
     plt.grid(True)
-    plt.yticks([0, 0.5, 1])
+    plt.yticks(yticks)
     
     # Ajustando os rótulos dos bits no eixo X
     plt.xticks(ticks, labels)

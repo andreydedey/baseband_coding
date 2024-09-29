@@ -1,7 +1,7 @@
 def hdb3(bits):
     # Implementação simplificada de HDB3 (bipolar encoding com violação após 4 zeros consecutivos)
     result = []
-    polarity = 1
+    polarity = -1
     zero_count = 0
     for bit in bits:
         if bit == '0':
