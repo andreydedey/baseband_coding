@@ -38,7 +38,7 @@ def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, manchester=F
     plt.yticks([0, 0.5, 1])
     
     # Ajustando os rótulos dos bits no eixo X
-    plt.xticks(ticks, labels, rotation='vertical')
+    plt.xticks(ticks, labels)
     
     plt.tight_layout()
     plt.savefig(file_path)
