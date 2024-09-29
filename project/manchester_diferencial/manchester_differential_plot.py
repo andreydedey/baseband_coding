@@ -16,7 +16,7 @@ def plot_manchester_differential():
     print(f"Sequência 1: {''.join(str(bit) for bit in signal_1)}\nSequência 2: {''.join(str(bit) for bit in signal_2)}\n")
 
     # Gráfico do sinal NZRI codificado
-    plot_signal(SEQUENCE_1, signal_1, "Manchester Differential Encoded Sequence", os.path.join(output_dir, "manchester_differential_encoded_signal1"))
+    plot_signal(SEQUENCE_1, signal_1, "Manchester Differential Encoded Sequence", os.path.join(output_dir, "manchester_differential_encoded_signal1"), manchester=True)
 
     # Gráfico do sinal 2 NZRI codificado
-    plot_signal(SEQUENCE_2, signal_2, "Manchester Differential Encoded Sequence", os.path.join(output_dir, "manchester_differential_encoded_signal2"))
+    plot_signal(SEQUENCE_2, signal_2, "Manchester Differential Encoded Sequence", os.path.join(output_dir, "manchester_differential_encoded_signal2"), manchester=True)
