@@ -9,8 +9,8 @@ def plot_hdb3():
     os.makedirs(outpur_dir, exist_ok=True)
 
     # Processar as sequências
-    signal_1 = hdb3(SEQUENCE_1)
-    signal_2 = hdb3(SEQUENCE_2)
+    signal_1 = hdb3([1,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1])
+    signal_2 = hdb3([1,1,1,0,1,0,0,1,0,1,0,0,0,0,1,0])
 
     print("HDB3")
     print(f"Sequência 1: {''.join(str(bit) for bit in signal_1)}\nSequência 2: {''.join(str(bit) for bit in signal_2)}\n")
