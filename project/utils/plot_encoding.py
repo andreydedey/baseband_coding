@@ -1,19 +1,12 @@
 import matplotlib.pyplot as plt
 
-def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, yticks=[0, 1], manchester=False):
-    # Converte a string de bits em uma lista de caracteres
-    bits = list(bits)
-    
-    # Adicionar Fonte
-    bits = [None] + bits + [None] 
-    signal = [0] + signal + [signal[-1]]  
-
+def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, yticks=[0, 0.5, 1], manchester=False):
     if manchester:
         # Criar o eixo do tempo e duplicar o sinal corretamente
         time = []
         signal_expanded = []
         
-        for i in range(len(bits) - 2):  # Ajusta o loop para os bits extras
+        for i in range(len(bits)):
             # Cada bit deve ocupar dois espaços no eixo X
             time.append(i * 2)        # Primeiro espaço
             time.append(i * 2 + 1)    # Segundo espaço
@@ -27,14 +20,14 @@ def plot_signal(bits, signal, title, file_path, negative_ylim=0.25, yticks=[0, 1
         labels = []
         for i in range(len(bits)):
             ticks.append(i * 2)  # Coloca o rótulo no meio de cada par de espaços
-            labels.append(bits[i] if bits[i] is not None else '') 
+            labels.append(bits[i])     # Coloca o bit como rótulo
         
     else:
         # Código padrão para outros tipos de codificação
         time = list(range(len(signal)))
         signal_expanded = signal
         ticks = range(len(bits))
-        labels = [bit if bit is not None else '' for bit in bits] 
+        labels = bits
 
     # Plot do sinal
     plt.figure()

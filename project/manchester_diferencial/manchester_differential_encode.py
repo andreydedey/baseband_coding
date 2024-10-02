@@ -1,6 +1,6 @@
 def manchester_differential(bits):
     result = []
-    previous = 1  # Começamos com o nível alto
+    previous = 0
 
     for bit in bits:
         if bit == '1':
